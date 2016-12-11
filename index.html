@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="=utf-8">
+    <!--Twitter Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Train Scheduler</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <div class="jumbotron" style="background-color: #314a51 ; color: white;">
+            <h1 class="text-center"><strong>Train Scheduler</strong></h1>
+            <p class="text-center">A database of train schedules</p>
+        </div>
+       
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                
+                <div class="panel panel-primary" style="border-color: #314a51">
+                    
+                    <div class="panel-heading" style="background-color: #314a51 ; color: white">
+                        <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+                    </div>
+                    
+                    <div class="panel-body" id="trainTable">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+            
+                <div class="panel panel-primary" style="border-color: #314a51">
+                    <div class="panel-heading" style="background-color: #314a51 ; color: white;">
+                        <h3 class="panel-title"><strong>Add Train</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <form role="form">
+                            
+                            <div class="form-group">
+                                <label for="trainName">Train Name:</label>
+                                <input type="text" class="form-control" id="trainName">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="destination">Destination:</label>
+                                <input class="form-control" id="destination">
+                                </input>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="firstTrainTime">First Train Time (hh:mm - Military Time):</label>
+                                <input type="text" class="form-control" id="firstTrainTime">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="frequency">Frequency:</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-default" id="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <!-- firebase -->
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!-- logic -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
